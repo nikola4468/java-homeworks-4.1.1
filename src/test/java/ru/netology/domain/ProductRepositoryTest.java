@@ -9,6 +9,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ProductRepositoryTest {
     private ProductRepository repository = new ProductRepository();
     private Book coreJava = new Book();
+    Book book1 = new Book(1, "название 1", 1000, "автор 1");
+    Book book2 = new Book(2, "название 2", 2000, "автор 2");
+    Book book3 = new Book(3, "название 3", 3000, "автор 3");
+    Smartphone smartphone1 = new Smartphone(4, "название 4", 4000, "компания 1");
+    Smartphone smartphone2 = new Smartphone(5, "название 5", 5000, "компания 2");
+    Smartphone smartphone3 = new Smartphone(6, "название 6", 6000, "компания 3");
+    Book book4 = new Book(7, "название 4", 7000, "автор 4");
+
 
     @Test
     public void shouldSaveOneItem() {
@@ -22,13 +30,6 @@ class ProductRepositoryTest {
     @Test
     public void shouldFindById() {
         ProductRepository repository = new ProductRepository();
-        Book book1 = new Book(1, "название 1", 1000, "автор 1");
-        Book book2 = new Book(2, "название 2", 2000, "автор 2");
-        Book book3 = new Book(3, "название 3", 3000, "автор 3");
-        Smartphone smartphone1 = new Smartphone(4, "название 4", 4000, "компания 1");
-        Smartphone smartphone2 = new Smartphone(5, "название 5", 5000, "компания 2");
-        Smartphone smartphone3 = new Smartphone(6, "название 6", 6000, "компания 3");
-        Book book4 = new Book(7, "название 4", 7000, "автор 4");
 
         repository.save(book1);
         repository.save(book2);
@@ -50,13 +51,6 @@ class ProductRepositoryTest {
     @Test
     public void shouldFindByIdNo() {
         ProductRepository repository = new ProductRepository();
-        Book book1 = new Book(1, "название 1", 1000, "автор 1");
-        Book book2 = new Book(2, "название 2", 2000, "автор 2");
-        Book book3 = new Book(3, "название 3", 3000, "автор 3");
-        Smartphone smartphone1 = new Smartphone(4, "название 4", 4000, "компания 1");
-        Smartphone smartphone2 = new Smartphone(5, "название 5", 5000, "компания 2");
-        Smartphone smartphone3 = new Smartphone(6, "название 6", 6000, "компания 3");
-        Book book4 = new Book(7, "название 4", 7000, "автор 4");
 
         repository.save(book1);
         repository.save(book2);
